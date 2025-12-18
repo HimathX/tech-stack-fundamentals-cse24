@@ -63,5 +63,18 @@
     "grade": "A",
     "last_updated": "2025-12-18 16:16 UTC",
     "submission_count": 1
+  },
+  "Sandhawathiya_Slash": {
+    "student": "Sandhawathiya_Slash",
+    "file_structure": 5,
+    "functionality": 40,
+    "ui_design": 29,
+    "code_quality": 15,
+    "responsive": 10,
+    "issues": [],
+    "total": 99,
+    "grade": "A",
+    "last_updated": "2025-12-18 17:01 UTC",
+    "submission_count": 1
   }
 }

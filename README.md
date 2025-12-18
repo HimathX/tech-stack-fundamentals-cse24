@@ -1,7 +1,5 @@
 # Tech Stack Fundamentals Workshops
 
-**Repository:** `tech-stack-fundamentals-cse24`
-
 ---
 
 ## Repository Structure

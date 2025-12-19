@@ -264,5 +264,18 @@
     "grade": "C",
     "last_updated": "2025-12-19 15:48 UTC",
     "submission_count": 1
+  },
+  "Shavini_Kaveesha": {
+    "student": "Shavini_Kaveesha",
+    "file_structure": 10,
+    "semantic_html": 20,
+    "functionality": 23,
+    "design": 22,
+    "responsive": 14,
+    "issues": [],
+    "total": 89,
+    "grade": "B",
+    "last_updated": "2025-12-19 17:10 UTC",
+    "submission_count": 1
   }
 }

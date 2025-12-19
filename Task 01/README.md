@@ -2,27 +2,37 @@
 
 > *"Your portfolio is your first impression in the tech world!"* 💼
 
-![Last Updated](https://img.shields.io/badge/Last%20Updated-live-blue)
-![Task](https://img.shields.io/badge/Task-01%20Portfolio-orange)
-![Challenge](https://img.shields.io/badge/Challenge-CSE%2024%20Batch-green)
+![Last Updated](https://img.shields.io/badge/Last%20Updated-2025-12-19%2006%3A47%20UTC-blue)
+![Submissions](https://img.shields.io/badge/Submissions-6-green)
 
 ## 🎯 The Challenge
-
-Build a **professional portfolio website** showcasing:
-- ✨ Your skills and expertise
-- 📚 Educational background
-- 🎓 Achievements and awards
-- 💻 Your best projects
-- 📬 Contact information
-- 📱 Fully responsive design
-
-**Technologies:** HTML5, CSS3, Semantic Markup, Responsive Design
+Build a professional portfolio website showcasing your skills, projects, and background using semantic HTML and responsive CSS!
 
 ---
 
 ## 🏅 Hall of Fame
 
-Keep building! Submit your portfolio and you'll appear here! 🚀
+### 🥇 First Place
+**vishwa** - 60/100
+
+### 🥈 Second Place
+**Binuka** - 56/100
+
+### 🥉 Third Place
+**Sachini_Gunasekara** - 38/100
+
+---
+
+## 📊 Full Leaderboard
+
+| Rank | Student | Score | Grade | Title | Last Updated |
+|:----:|---------|:-----:|:-----:|-------|--------------|
+| 🥇 | **vishwa** | 60/100 | 📝 D | 👑 Portfolio Legend | 2025-12-19 06:33 UTC |
+| 🥈 | **Binuka** | 56/100 | 🔨 F | 🥈 Design Master | 2025-12-19 06:39 UTC |
+| 🥉 | **Sachini_Gunasekara** | 38/100 | 🔨 F | 🥉 Rising Designer | 2025-12-19 06:35 UTC |
+| 4 | **athishaya.j** | 31/100 | 🔨 F | 🚀 Just Getting Started | 2025-12-19 06:47 UTC |
+| 5 | **suhas** | 18/100 | 🔨 F | 🚀 Just Getting Started | 2025-12-19 06:26 UTC |
+| 6 | **Suhas_Dissa** | 6/100 | 🔨 F | 🚀 Just Getting Started | 2025-12-18 19:28 UTC |
 
 ---
 
@@ -30,76 +40,37 @@ Keep building! Submit your portfolio and you'll appear here! 🚀
 
 | Category | Points | What We're Looking For |
 |----------|:------:|------------------------|
-| 📁 **File Structure** | 10 | `index.html`, `style.css`, `images/` folder, meta tags |
-| 🏗️ **Semantic HTML** | 20 | `<nav>`, `<header>`, `<main>`, `<footer>`, `<section>`, `<article>` |
-| ⚡ **Functionality** | 25 | Navigation links, forms with labels, lists, collapsible sections |
-| 🎨 **Design** | 25 | Custom CSS, colors, grid/flex layout, hover effects, images |
-| 📱 **Responsive** | 20 | Media queries, mobile-friendly, flexible units |
-| **TOTAL** | **100** | Your final score! |
+| 📁 File Structure | 10 | index.html, style.css, images folder, meta tags |
+| 🏗️ Semantic HTML | 20 | nav, header, main, footer, sections, articles |
+| ⚡ Functionality | 25 | Navigation links, forms with labels, lists, collapsible sections |
+| 🎨 Design | 25 | Custom CSS, colors, grid/flex layout, hover effects, images |
+| 📱 Responsive | 20 | Media queries, mobile-friendly, flexible units |
 
 ---
 
-## ✅ Grading Checklist
+## 🚀 Recent Activity
 
-### 📁 File Structure (10 points)
-- [ ] `index.html` file created
-- [ ] `style.css` file created
-- [ ] `images/` folder with profile photo
-- [ ] Meta tags: `charset` and `viewport`
-
-### 🏗️ Semantic HTML (20 points)
-- [ ] `<nav>` for navigation menu
-- [ ] `<header>` for profile section
-- [ ] `<main>` for main content
-- [ ] `<footer>` with copyright
-- [ ] At least 3 `<section>` tags
-- [ ] `<article>` tags for projects
-
-### ⚡ Functionality (25 points)
-- [ ] Navigation links scroll to sections (anchor links with `#id`)
-- [ ] Contact form with 3+ labeled inputs
-- [ ] Skills displayed as `<ul>` or `<ol>` lists
-- [ ] 2+ `<details>` sections (collapsible)
-- [ ] At least 3 projects displayed
-
-### 🎨 Design (25 points)
-- [ ] Custom CSS styling (20+ rules)
-- [ ] Color scheme and typography
-- [ ] CSS Grid or Flexbox layout
-- [ ] Hover effects on interactive elements
-- [ ] Images with `alt` text
-
-### 📱 Responsive (20 points)
-- [ ] At least 2 media queries (`@media`)
-- [ ] Mobile viewport meta tag
-- [ ] Flexible units (%, rem, em, auto)
-- [ ] Readable on phones, tablets, desktops
+- **athishaya.j** updated their portfolio → 31/100 (2025-12-19 06:47 UTC)
+- **Binuka** updated their portfolio → 56/100 (2025-12-19 06:39 UTC)
+- **Sachini_Gunasekara** updated their portfolio → 38/100 (2025-12-19 06:35 UTC)
+- **vishwa** updated their portfolio → 60/100 (2025-12-19 06:33 UTC)
+- **suhas** updated their portfolio → 18/100 (2025-12-19 06:26 UTC)
 
 ---
 
+## 💡 Tips to Improve Your Score
 
-## 🔄 Submission Process
-
-1. **Create your portfolio** following the guidelines
-2. **Test on all devices** (mobile, tablet, desktop)
-3. **Submit to GitHub** in your folder: `Task 01/submissions/Your_Name/`
-4. **Include files**:
-   - `index.html`
-   - `style.css`
-   - `images/profile.jpg`
-5. **Push to repository**
-6. **View your score** in this leaderboard!
+1. **Use Semantic HTML** - nav, header, main, footer, section, article
+2. **Create Proper Forms** - Don't forget label tags!
+3. **Add CSS Grid** - Use display: grid for modern layout
+4. **Make it Responsive** - Add @media queries for mobile
+5. **Show your Profile Photo** - Use proper img tags with alt text
+6. **Add Hover Effects** - CSS :hover makes it interactive
+7. **Use Lists Correctly** - Use ul and li for organized content
+8. **Collapsible Sections** - Try details and summary tags
 
 ---
 
 <p align="center">
-  <b>Deadline: December 26, 2025</b>
-  <br>
-  <i>Build your best portfolio and show the world what you can do! 🌟</i>
-  <br><br>
-  <code>Task 01/submissions/Your_First_Name_Your_Last_Name/</code>
+  <i>🤖 Auto-graded by GitHub Actions | Build your best portfolio! 🌟</i>
 </p>
-
----
-
-*Generated by GitHub Actions | CSE 24 Batch | Tech Stack Fundamentals*

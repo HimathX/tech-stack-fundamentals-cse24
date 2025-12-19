@@ -1,0 +1,110 @@
+/* Navy theme base palette */
+:root {
+	--navy: #0b1f3a;
+	--navy-light: #123260;
+	--navy-soft: #f4f7fc;
+	--accent: #f5a524;
+	--text: #0e1726;
+	--muted: #6b7280;
+}
+
+body#page-root {
+	margin: 0;
+	font-family: "Segoe UI", system-ui, sans-serif;
+	background: var(--navy-soft);
+	color: var(--text);
+}
+
+h1, h2 {
+	color: var(--navy);
+	font-weight: 700;
+	letter-spacing: 0.02em;
+}
+
+a {
+	color: var(--navy);
+	text-decoration: none;
+	font-weight: 600;
+}
+
+a:hover {
+	color: var(--accent);
+}
+
+/* Top navigation links as pill/rectangle buttons */
+#page-root > a {
+	display: inline-block;
+	background: var(--navy);
+	color: #fff;
+	padding: 0.5rem 0.9rem;
+	margin: 0.35rem 0.35rem 1rem 0;
+	border-radius: 10px;
+	border: 1px solid var(--navy-light);
+	box-shadow: 0 6px 14px rgba(11, 31, 58, 0.15);
+	transition: background 0.2s ease, transform 0.2s ease;
+}
+
+#page-root > a:hover {
+	background: var(--navy-light);
+	color: #fff;
+	transform: translateY(-1px);
+}
+
+.section-block {
+	background: #fff;
+	padding: 2.5rem 1.75rem;
+	margin: 1rem auto;
+	max-width: 960px;
+	border: 1px solid rgba(11, 31, 58, 0.08);
+	box-shadow: 0 8px 18px rgba(11, 31, 58, 0.06);
+	border-radius: 14px;
+}
+
+#home {
+	background: linear-gradient(145deg, rgba(11, 31, 58, 0.08), #fff);
+}
+
+ul {
+	padding-left: 1.25rem;
+	color: var(--muted);
+}
+
+#contact-form form {
+	display: grid;
+	gap: 0.8rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+	width: 100%;
+	padding: 0.65rem 0.75rem;
+	border: 1px solid rgba(11, 31, 58, 0.2);
+	border-radius: 10px;
+	background: var(--navy-soft);
+	font-size: 1rem;
+}
+
+input[type="submit"] {
+	width: fit-content;
+	padding: 0.7rem 1.4rem;
+	background: var(--navy);
+	color: #fff;
+	border: none;
+	border-radius: 10px;
+	font-weight: 700;
+	cursor: pointer;
+	box-shadow: 0 6px 14px rgba(11, 31, 58, 0.2);
+}
+
+input[type="submit"]:hover {
+	background: var(--navy-light);
+}
+
+#site-footer {
+	text-align: center;
+	padding: 1.25rem 1rem 2rem;
+	background: var(--navy);
+	color: #e5e7eb;
+	margin-top: 2rem;
+}

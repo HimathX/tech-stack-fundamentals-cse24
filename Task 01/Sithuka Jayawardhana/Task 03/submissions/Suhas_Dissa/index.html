@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reddit Browser</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            color: #FF4500;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .search-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .search-container input {
+            padding: 12px 15px;
+            font-size: 16px;
+            width: 300px;
+            border: 2px solid #FF4500;
+            border-radius: 4px;
+            outline: none;
+        }
+        
+        .search-container input:focus {
+            box-shadow: 0 0 5px #FF4500;
+        }
+        
+        .search-container button {
+            padding: 12px 25px;
+            margin-left: 10px;
+            background-color: #FF4500;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        
+        .search-container button:hover {
+            background-color: #FF6B35;
+            transform: translateY(-2px);
+        }
+        
+        .loading {
+            text-align: center;
+            font-size: 18px;
+            color: #666;
+            display: none;
+        }
+        
+        .loading.show {
+            display: block;
+        }
+        
+        .posts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .post-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+        
+        .post-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+            border: 1px solid #FF4500;
+        }
+        
+        .post-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #ddd;
+        }
+        
+        .post-content {
+            padding: 15px;
+        }
+        
+        .post-title {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+            line-height: 1.4;
+            min-height: 50px;
+        }
+        
+        .post-stats {
+            display: flex;
+            gap: 15px;
+            font-size: 0.9rem;
+            color: #666;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .error {
+            text-align: center;
+            color: red;
+            font-size: 18px;
+            padding: 20px;
+            display: none;
+        }
+        
+        .error.show {
+            display: block;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #666;
+            font-size: 0.9rem;
+            padding: 20px;
+            border-top: 1px solid #ddd;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .search-container input {
+                width: 100%;
+            }
+            
+            .search-container button {
+                margin-left: 0;
+                margin-top: 10px;
+                width: 100%;
+            }
+            
+            .posts-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🔥 Reddit Browser</h1>
+        <p>Explore Reddit posts from any subreddit</p>
+    </header>
+    
+    <div class="search-container">
+        <input 
+            type="text" 
+            id="subreddit-input" 
+            placeholder="Enter subreddit (e.g., programming, webdev, python)"
+            value="programming"
+        >
+        <button onclick="searchSubreddit()">Search</button>
+    </div>
+    
+    <div id="loading" class="loading">⏳ Loading posts...</div>
+    <div id="error" class="error"></div>
+    
+    <div id="posts-container" class="posts-grid">
+        <!-- Posts will appear here -->
+    </div>
+    
+    <footer>
+        <p>Made with ❤️ | Tech Stack Fundamentals Workshop</p>
+        <p>Click on any post to view it on Reddit</p>
+    </footer>
+    
+    <script>
+        let currentSubreddit = 'programming';
+        
+        // Display posts on the page
+        function displayPosts(posts) {
+            const container = document.getElementById('posts-container');
+            const error = document.getElementById('error');
+            
+            container.innerHTML = '';
+            error.classList.remove('show');
+            
+            if (!posts || posts.length === 0) {
+                container.innerHTML = '<p>No posts found</p>';
+                return;
+            }
+            
+            posts.forEach(post => {
+                const p = post.data;
+                
+                // Create card HTML
+                const cardHTML = `
+                    <a href="https://reddit.com${p.permalink}" target="_blank" style="text-decoration: none; color: inherit;">
+                        <div class="post-card">
+                            <img 
+                                src="${p.thumbnail}" 
+                                class="post-image" 
+                                alt="Post thumbnail"
+                                onerror="this.style.display='none'"
+                            >
+                            <div class="post-content">
+                                <div class="post-title">${escapeHtml(p.title)}</div>
+                                <div class="post-stats">
+                                    <div class="stat">👍 ${formatNumber(p.ups)}</div>
+                                    <div class="stat">💬 ${formatNumber(p.num_comments)}</div>
+                                    <div class="stat">👤 ${escapeHtml(p.author)}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                `;
+                
+                container.innerHTML += cardHTML;
+            });
+        }
+        
+        // Format large numbers (1000 -> 1K)
+        function formatNumber(num) {
+            if (num > 1000) {
+                return (num / 1000).toFixed(1) + 'K';
+            }
+            return num;
+        }
+        
+        // Escape HTML to prevent XSS
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+        
+        // Fetch posts from Reddit API
+        async function loadPosts() {
+            const url = `https://www.reddit.com/r/${currentSubreddit}.json`;
+            const loading = document.getElementById('loading');
+            const error = document.getElementById('error');
+            const container = document.getElementById('posts-container');
+            
+            loading.classList.add('show');
+            error.classList.remove('show');
+            
+            try {
+                const response = await fetch(url);
+                
+                if (!response.ok) {
+                    throw new Error(`Subreddit "${currentSubreddit}" not found`);
+                }
+                
+                const data = await response.json();
+                const posts = data.data.children;
+                
+                displayPosts(posts);
+                
+            } catch (err) {
+                error.classList.add('show');
+                error.textContent = `❌ Error: ${err.message}. Please check the subreddit name.`;
+                container.innerHTML = '';
+                
+            } finally {
+                loading.classList.remove('show');
+            }
+        }
+        
+        // Search for a subreddit
+        function searchSubreddit() {
+            const input = document.getElementById('subreddit-input');
+            const newSubreddit = input.value.trim().toLowerCase();
+            
+            if (!newSubreddit) {
+                alert('Please enter a subreddit name');
+                return;
+            }
+            
+            currentSubreddit = newSubreddit;
+            loadPosts();
+        }
+        
+        // Allow Enter key to search
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('subreddit-input').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    searchSubreddit();
+                }
+            });
+        });
+        
+        // Load initial posts when page loads
+        window.addEventListener('load', loadPosts);
+    </script>
+</body>
+</html>

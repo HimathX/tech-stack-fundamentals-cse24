@@ -1,0 +1,42 @@
+.body{
+    margin: 0;
+    background-color: grey;
+}
+
+.navbar-style {
+    background-color: darkblue;
+    color: white;
+    width: 100%;
+    min-height: 60px;
+    margin: 0;
+    border: none;
+    display: flex;
+}
+
+.nav-item {
+    padding: 20px;
+}
+
+.nav-item a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero-section {
+    width: 100%;
+    min-height:500px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hi-text {
+    color: white;
+}
+
+.name-text{
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: medium;
+}

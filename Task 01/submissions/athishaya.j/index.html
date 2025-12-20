@@ -5,67 +5,175 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Athishaya.j</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
     <nav>
-		<a href='#home'> Home | </a>
-		<a href='#about'> About | </a>
-		<a href='#skills'> Skills | </a>
-		<a href='#projects'> Projects | </a>
-		<a href='#contacts'> Contacts | </a>
+		<ul class="one">
+			<li><a href='#home'> Home  </a></li>
+			<li><a href='#about'> About  </a></li>
+			<li><a href='#skills'> Skills  </a></li>
+			<li><a href='#projects'> Projects </a></li>
+			<li><a href='#contacts'> Contacts  </a></li>
+		</ul>		
 	</nav>
 	
     <header>
-		<img src='image/profile.jpg alt='Athishaya' class='profile-image'>
+		<img src='image/profile.png' alt='Athishaya' class='profile-image'>
 		<h1>ATHISHAYA JEEVAKARAN</h1>
 		<P>Web Developer | Computer Science Student</P>
 	</header>
 	
     <main>
+
 		<section id ='about'>
-			<h2>About Me </h2>
-			<p> one para about my self</p>
+			
+			<details>
+				<summary>About Me</summary>
+				<div>
+					<p>
+					I am a Computer Science and Engineering undergraduate at the University of Moratuwa with a strong interest in software development and emerging technologies. I am currrently focused on strngthening my foundations in programming, algorithms and mathematics while gaining hands-on experience through projects and workshops.
+					</p>
+					<p>
+					Through academic work and self learning, I am building a strong foundation in programming and core computer science principles. I am eager to explore opportunities that allow me to learn, collaborate and create impactful solutions.
+					</p>
+				</div>
+			</details>
+
+			<details>
+				<summary>Education</summary>
+				<ul>
+					<li>
+						University of Moratuwa - BSc. in Computer Science and Engineering(2024-Present)
+						<ul>
+							<li>Focus areas: Programming, Algorithms, Software Development, Mathematics</li>
+						</ul>
+					</li>
+					<li>
+						J/Varany Central College(2015-2023)
+						<ul>
+							<li>Ordinary Level(2020): A passes for Information and Communication Technology, Bussiness and Accounting Stuides, Music and Other 6 compulsory subjects. </li>
+							<li>Advanced Level(2023): A passes for Physics, Chemistry and Combined Mathematics.</li>
+						</ul>
+					</li>
+				</ul>
+			</details>
+
+			<details>
+				<summary>Achievements</summary>
+				<ul>
+					<li>Paricipated in National Level Chess Competition(2023)</li>
+				</ul>
+			</details>
+
 		</section>
+
 		<section id = 'skills'>
 			<h2>Skills</h2>
-			<h3>Frontend</h3>
+			<h3>Core Programming</h3>
 			<ul>
-				<li>HTML</li>
-				<li>CSS</li>
-				<li>JavaScript</li>
+				<li>Python(Intermediate)</li>
+				<li>C++(Basic)</li>
+				<li>Java(Basic)</li>
 			</ul>
 
-			<h3>Backend</h3>
+			<h3>Web Development</h3>
 			<ul>
-				<li>Python</li>
-				
+				<li>HTML5(Intermediate)</li>
+				<li>CSS3(Basic)</li>
+				<li>JavaScript(Basic)</li>
+				<li>PHP(Basic)</li>
+			</ul>
+
+			<h3>Database Management</h3>
+			<ul>
+				<li>MySQL(Basic)</li>
+			</ul>
+
+			<h3>Developer Tools</h3>
+			<ul>
+				<li>Git(Basic)</li>
+				<li>GitHup(Basic)</li>
+			</ul>
+
+			<h3>Documentation</h3>
+			<ul>
+				<li>LaTex(Basic)</li>
+			</ul>
+
+			<h3>AI / Data Science</h3>
+			<ul>
+				<li>PyTorch(Basic)</li>
+				<li>CUDA(Basic)</li>
+				<li>Pandas(Basic)</li>
 			</ul>
 		</section>
 
 		<section id='projects'>
 			<h2>Projects</h2>
 			<article class='project-card'>
-				<p>No project yet</p>
+				<h3>Personal Portfolio Website</h3>
+				<p>A modern, responsive portfolio website to showcase my skills, projects and achievements. The website is designed to provide clean and prfessional presentation of my acedamic and personal work.</p>
+				<p><b>Technologies Used: </b>HTML, CSS, JavScript</p>
+				<p><b>Key Features:</b></p>
+				<ol>
+					<li>Fully responsive design for mobile and desktop.</li>
+					<li>Interactive navigation and smooth scrolling.</li>
+					<li>Section for About Me, Education, Achievements, Projects and Contact.</li>
+				</ol>
+				<a href="https://githup.com/AthishayaJ/" target="_bank">Viem project here</a>
+			</article>
+
+			<article class='project-card'>
+				<h3>Python Data Analysis Projects</h3>
+				<p>A modern, responsive portfolio website to showcase my skills, projects and achievements. The website is designed to provide clean and prfessional presentation of my acedamic and personal work.</p>
+				<p><b>Technologies Used: </b>HTML, CSS, JavScript</p>
+				<p><b>Key Features:</b></p>
+				<ol>
+					<li>Fully responsive design for mobile and desktop.</li>
+					<li>Interactive navigation and smooth scrolling.</li>
+					<li>Section for About Me, Education, Achievements, Projects and Contact.</li>
+				</ol>
+				<a href="https://githup.com/AthishayaJ/" target="_bank">Viem project here</a>
+			</article>
+
+			<article class='project-card'>
+				<h3>Web-based To-Do Application</h3>
+				<p>A modern, responsive portfolio website to showcase my skills, projects and achievements. The website is designed to provide clean and prfessional presentation of my acedamic and personal work.</p>
+				<p><b>Technologies Used: </b>HTML, CSS, JavScript</p>
+				<p><b>Key Features:</b></p>
+				<ol>
+					<li>Fully responsive design for mobile and desktop.</li>
+					<li>Interactive navigation and smooth scrolling.</li>
+					<li>Section for About Me, Education, Achievements, Projects and Contact.</li>
+				</ol>
+				<a href="https://githup.com/AthishayaJ/" target="_bank">Viem project here</a>
 			</article>
 		</section>
+
 		<section id='contact'>
+			<h2>Drop Me a Message</h2>
 			<form>
-				<label for='name'>Your name: </label>label>
-				<input type='text' id='name' name='name' palceholder='Name'>
-
+				<label for='name'>Your name: </label>
+				<input type='text' id='name' name='name' name='name'>
+				<br>
 				<label for='email'>Your email: </label>
-				<input type='email' id='email' name='email' palceholder='Email'>
-
+				<input type='email' id='email' name='email'>
+				<br>
 				<label for='message'>Message: </label>
 				<textarea id='message' name='message'></textarea>
-
+				<br>
 				<button type='submit'>Send</button>
 			</form>
 		</section>
+
 	</main>
+
     <footer></footer>
+
 </body>
+
 </html>
 

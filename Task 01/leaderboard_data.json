@@ -384,5 +384,20 @@
     "grade": "C",
     "last_updated": "2025-12-25 10:41 UTC",
     "submission_count": 1
+  },
+  "Isuru_Babarendage": {
+    "student": "Isuru_Babarendage",
+    "file_structure": 7,
+    "semantic_html": 18,
+    "functionality": 23,
+    "design": 25,
+    "responsive": 20,
+    "issues": [
+      "\u26a0\ufe0f No profile photo in images/"
+    ],
+    "total": 93,
+    "grade": "A",
+    "last_updated": "2025-12-25 13:12 UTC",
+    "submission_count": 1
   }
 }

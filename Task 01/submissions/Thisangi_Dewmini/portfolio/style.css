@@ -1,0 +1,106 @@
+/*1.Basic Reset and body Style*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   /*cite:50*/
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;  /*cite:51*/
+    background-color: #f5f5f5;
+    color : #333;   /*cite51*/
+    line-height: 1.6;   /*cite:51*/
+}
+
+/*Navigation styling*/
+nav {
+    background-color: #4285F4;   /*cite51*/
+    padding: 15px;  /*cite52*/
+    text-align:center;
+}
+
+nav a {
+    color: white;   /*cite52*/
+    text-decoration: none;  /*cite52*/
+    margin: 0 15px;   /*cite52*/
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline; /* cite: 53 */
+}
+
+/* 4. Header Styling */
+header {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #4285F4, #34A853); /* cite: 47 */
+    color: white;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Makes image circular */
+    border: 5px solid white;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+/* 5. Section Styling */
+section {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white; /* cite: 47 */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* cite: 47 */
+}
+
+/* 6. Skills & Projects Grid */
+.skills-container, .projects-grid {
+    display: grid; /* cite: 43 */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* cite: 44, 45 */
+    gap: 20px; /* cite: 46 */
+}
+
+/* 7. Project Card Styling */
+.project-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease; /* cite: 48 */
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* cite: 48, 53 */
+    box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+}
+
+/* 8. Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px; /* cite: 48, 61 */
+}
+
+button {
+    background-color: #4285F4;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer; /* cite: 48, 53 */
+}
+
+button:hover {
+    background-color: #3367d6; /* cite: 48, 53 */
+}
+

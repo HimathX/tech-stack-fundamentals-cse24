@@ -129,22 +129,18 @@
   "athishaya.j": {
     "student": "athishaya.j",
     "file_structure": 7,
-    "semantic_html": 12,
-    "functionality": 18,
-    "design": 15,
+    "semantic_html": 20,
+    "functionality": 23,
+    "design": 23,
     "responsive": 8,
     "issues": [
       "\u274c Missing images/ folder",
-      "\u274c No <nav> tag",
-      "\u274c No <header> tag",
-      "\u26a0\ufe0f Incomplete anchor navigation",
-      "\u26a0\ufe0f No grid/flex layout",
       "\u274c No media queries - not responsive"
     ],
-    "total": 60,
-    "grade": "D",
-    "last_updated": "2025-12-22 17:36 UTC",
-    "submission_count": 4
+    "total": 81,
+    "grade": "B",
+    "last_updated": "2025-12-25 14:52 UTC",
+    "submission_count": 5
   },
   "Dihini": {
     "student": "Dihini",
@@ -367,6 +363,52 @@
     "total": 64,
     "grade": "D",
     "last_updated": "2025-12-25 08:51 UTC",
+    "submission_count": 1
+  },
+  "Sisiyuru_Wijenayake": {
+    "student": "Sisiyuru_Wijenayake",
+    "file_structure": 10,
+    "semantic_html": 20,
+    "functionality": 23,
+    "design": 12,
+    "responsive": 8,
+    "issues": [
+      "\u26a0\ufe0f No grid/flex layout",
+      "\u274c No media queries - not responsive"
+    ],
+    "total": 73,
+    "grade": "C",
+    "last_updated": "2025-12-25 10:41 UTC",
+    "submission_count": 1
+  },
+  "Isuru_Babarendage": {
+    "student": "Isuru_Babarendage",
+    "file_structure": 7,
+    "semantic_html": 18,
+    "functionality": 23,
+    "design": 25,
+    "responsive": 20,
+    "issues": [
+      "\u26a0\ufe0f No profile photo in images/"
+    ],
+    "total": 93,
+    "grade": "A",
+    "last_updated": "2025-12-25 13:12 UTC",
+    "submission_count": 1
+  },
+  "Kamitha_Akash": {
+    "student": "Kamitha_Akash",
+    "file_structure": 10,
+    "semantic_html": 20,
+    "functionality": 23,
+    "design": 25,
+    "responsive": 8,
+    "issues": [
+      "\u274c No media queries - not responsive"
+    ],
+    "total": 86,
+    "grade": "B",
+    "last_updated": "2025-12-25 17:22 UTC",
     "submission_count": 1
   }
 }

@@ -1,0 +1,160 @@
+:root {
+    --neon-cyan: #00f2ff;
+    --dark-bg: #030b13;
+    --glass: rgba(0, 242, 255, 0.05);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    background-color: var(--dark-bg);
+    color: #e0faff;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    overflow-x: hidden;
+    /* Subtle circuit board pattern simulation */
+    background-image: 
+        radial-gradient(circle at 2px 2px, rgba(0, 242, 255, 0.1) 1px, transparent 0);
+    background-size: 40px 40px;
+}
+
+/* Glassmorphism Effect */
+.glass-card {
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 242, 255, 0.2);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0; width: 100%;
+    background: rgba(3, 11, 19, 0.9);
+    border-bottom: 1px solid var(--neon-cyan);
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex; justify-content: center;
+    list-style: none; padding: 15px; margin: 0;
+}
+
+nav ul li a {
+    color: var(--neon-cyan);
+    text-decoration: none;
+    padding: 0 20px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+/* Profile Photo Ring Effect */
+header {
+    height: 80vh;
+    display: flex; align-items: center; justify-content: center;
+    text-align: center;
+}
+
+.profile-container {
+    position: relative;
+    width: 200px; height: 200px;
+    margin: 0 auto 20px;
+}
+
+.profile-img {
+    width: 100%; height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--neon-cyan);
+}
+
+.circular-ring {
+    position: absolute;
+    top: -10px; left: -10px;
+    width: 216px; height: 216px;
+    border: 2px dashed var(--neon-cyan);
+    border-radius: 50%;
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+/* Neon Text */
+.neon-text {
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 0 0 10px var(--neon-cyan), 0 0 20px var(--neon-cyan);
+    margin: 0;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;
+}
+
+.skill-box {
+    border: 1px solid var(--neon-cyan);
+    padding: 20px; width: 100px;
+    transition: 0.3s;
+    cursor: crosshair;
+}
+
+.skill-box i { font-size: 2rem; display: block; margin-bottom: 10px; color: var(--neon-cyan); }
+
+.skill-box:hover {
+    background: var(--neon-cyan);
+    color: #000;
+    box-shadow: 0 0 20px var(--neon-cyan);
+}
+
+.skill-box:hover i { color: #000; }
+
+/* Project Cards */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    border: 1px solid rgba(0, 242, 255, 0.3);
+    padding: 20px;
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.project-card:hover {
+    border-color: var(--neon-cyan);
+    box-shadow: inset 0 0 15px rgba(0, 242, 255, 0.2);
+}
+
+/* Neon Button */
+.neon-btn {
+    background: transparent;
+    color: var(--neon-cyan);
+    border: 1px solid var(--neon-cyan);
+    padding: 15px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: 0.4s;
+}
+
+.neon-btn:hover {
+    background: var(--neon-cyan);
+    color: #000;
+    box-shadow: 0 0 30px var(--neon-cyan);
+}
+
+.container { max-width: 1000px; margin: 0 auto; padding: 100px 20px; }
+.section-title { color: var(--neon-cyan); border-left: 5px solid var(--neon-cyan); padding-left: 15px; margin-bottom: 40px; text-transform: uppercase; }
+
+input, textarea {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 242, 255, 0.2);
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+}
